@@ -1,0 +1,8 @@
+.restuarant-menu{
+    display: flex;
+}
+.restuarant-details img{
+    object-fit: contain;
+    width: 200px;
+    height: 100px
+}

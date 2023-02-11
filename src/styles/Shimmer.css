@@ -1,0 +1,19 @@
+.shimmer-list{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 5px;
+    /* margin: 0 10px 0 10px; */
+    width: 100%;
+}
+
+.shimmer-card{
+    width: 250px;
+    height: 200px;
+    border: 1px solid white;
+    background-color: rgb(235, 235, 235);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 7px 10px #fafafa;
+}

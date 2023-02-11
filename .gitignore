@@ -1,0 +1,39 @@
+#parcel chache folder;
+.parcel-cache/
+
+#node_modules folder
+node_modules/
+dist/
+
+#all log file
+**/*.log
+
+.chache
+
+#compiled code
+.o
+.pyc
+.class
+
+#build output directories, such as 
+/bin
+/out 
+/target
+
+#files generated at runtime, such as 
+.log
+.lock
+.tmp
+
+#hidden system files, such as 
+.DS_Store
+Thumbs.db
+
+#personal IDE config files, such as 
+.idea/workspace.xml
+
+.vscode
+# Local Netlify folder
+.netlify
+
+.babelrc
