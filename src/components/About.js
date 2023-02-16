@@ -1,30 +1,16 @@
 import React from "react"
 import "../styles/About.css";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import ProfileFunctionComponent from "./Profile";
 import Profile from "./ProfileClass";
 class About extends React.Component{
-    constructor(props){
-        super(props);
-        // console.log("Paren - constructor will called")
-    }
-    componentDidMount(){
-        //Component Did mount is the best place to API call
-        // console.log("Parent -  componentDidmount will be callled")
-    }
-    componentDidUpdate(){
-        // console.log("Parent ComponentDidUpdate")
-    }
     render(){
-        // console.log("Parent -  render method will be called")
         return(
             <div className="about">
             <h1>About me Page</h1>
             <h2>This is the Namaste React course 07 , Finding the Path 🚀</h2>
-            {/* <ProfileFunctionComponent name="Ajmal"/> */}
-            <ProfileFunctionComponent />
-            <Profile  name="First child "/>
-            {/* <Profile name="Second child" /> */}
+            <Link to="profile">Click ME to see the profile</Link>
+            <Outlet />
             </div>
         )
     }

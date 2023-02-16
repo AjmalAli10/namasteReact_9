@@ -2,18 +2,18 @@ import { useEffect, useState } from "react";
 function Profile(props){
     const [count, setCount] = useState(0)
     const [count2, setCount2] = useState(0)
-    useEffect(()=>{
-        // console.log("useEffect")
-        let timer =setInterval(()=>{
-            console.log("NamasteReact OP from useEffect")
-        },1000);
-        console.log("useEffect")
-        //"this function is called when you are unMounting this component"⬇️
-        return ()=>{
-            clearInterval(timer)
-            console.log("useEffect return")
-        }
-    })
+    // useEffect(()=>{
+    //     // console.log("useEffect")
+    //     let timer =setInterval(()=>{
+    //         console.log("NamasteReact OP from useEffect")
+    //     },1000);
+    //     console.log("useEffect")
+    //     //"this function is called when you are unMounting this component"⬇️
+    //     return ()=>{
+    //         clearInterval(timer)
+    //         console.log("useEffect return")
+    //     }
+    // })
     console.log("render")
     return (
         <div>
