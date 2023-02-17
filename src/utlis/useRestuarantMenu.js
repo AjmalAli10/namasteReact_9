@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import config from '../config';
 const useRestuarantMenu = (resId) =>{
     const [res, setRes] = useState(null);
     useEffect(()=>{
@@ -6,7 +7,7 @@ const useRestuarantMenu = (resId) =>{
     },[]);
     const getRestuarantMenu = async ()=>{
         try{
-             const getData = await fetch("https://www.swiggy.com/dapi/menu/v4/full?lat=12.9351929&lng=77.62448069999999&menuId="+resId);
+             const getData = await fetch(config.Restuarant_Menu_API+resId);
              const getMenuData = await getData.json();
              setRes(getMenuData.data);
              console.log(getMenuData);

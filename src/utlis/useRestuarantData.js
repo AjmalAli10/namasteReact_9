@@ -1,14 +1,16 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import config from "../config";
 const useRestuarantData = ()=>{
     const [allRestuarants, setAllRestuarants] = useState([]);
     const [filterRestuarants, setFilterRestuarants] = useState([]);
     useEffect(()=>{
+        console.log("useEffect from allRestuaranList")
         getRestuarantData()
     },[]); 
     async function getRestuarantData(){
         try{
-            const res = await axios.get("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&page_type=DESKTOP_WEB_LISTING");
+            const res = await axios.get(config.Restuarant_List_API);
             console.log(res)
             setAllRestuarants(res?.data?.data?.cards[2]?.data?.data?.cards);
             setFilterRestuarants(res?.data?.data?.cards[2]?.data?.data?.cards);

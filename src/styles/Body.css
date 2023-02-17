@@ -7,11 +7,12 @@
     width: 100%;
 }
 .search-Container{
-    margin-top: 5px;
+    margin: auto;
     display: flex;
     align-items: center;
-    margin-left: 40px;
-    margin-right: 40px;
+    justify-content: center;
+    /* margin-left: 40px;
+    margin-right: 40px; */
     -webkit-text-size-adjust: none;
     -webkit-tap-highlight-color: transparent;
     border: 1px solid #0000004d;

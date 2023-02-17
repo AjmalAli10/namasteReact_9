@@ -9,7 +9,7 @@ class About extends React.Component{
             <div className="about">
             <h1>About me Page</h1>
             <h2>This is the Namaste React course 07 , Finding the Path 🚀</h2>
-            <Link to="profile">Click ME to see the profile</Link>
+            <Link to="/about/profile">Click ME to see the profile</Link>
             <Outlet />
             </div>
         )

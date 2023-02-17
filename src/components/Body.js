@@ -5,12 +5,22 @@ import { Link } from "react-router-dom";
 import "../styles/Body.css";
 import { filterData } from "../utlis/helper";
 import useRestuarantData from "../utlis/useRestuarantData";
+import useOnline from "../utlis/useOnline";
 const Body = () => {
   const [filterRestuarants, setFilterRestuarants, allRestuarants] =
     useRestuarantData();
   const [searchInput, setSearchInput] = useState("");
-
+  const isOnline = useOnline();
   console.log("render");
+
+  //Early return 
+  // if(!isOnline){
+  //   return (
+  //     <div>
+  //       <h2>you are get 🛑 Disconnected. Please connect again</h2>
+  //     </div>
+  //   )
+  // }
   if (!allRestuarants) {
     return (
       <>
@@ -36,7 +46,8 @@ const Body = () => {
             const data = filterData(searchInput, allRestuarants);
             console.log("data", data);
             setFilterRestuarants(data);
-          }}>
+          }}
+          >
           Search
         </button>
       </div>
